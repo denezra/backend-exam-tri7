@@ -36,8 +36,4 @@ router.post("/login", async (req, res) => {
   }
 });
 
-router.get("/protected", authenticate, (req, res) => {
-  res.json({ message: "Authenticated successfully", user: req.user });
-});
-
 module.exports = router;
